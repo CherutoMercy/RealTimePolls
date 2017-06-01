@@ -6,9 +6,6 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var pollsRoutes     = require('./polls');
 
-router.get('/', function(req,res){
-	res.send('Voters Poll')
-})
 // Main App Page
 router.get('/', pollsRoutes.index);
 
