@@ -18,7 +18,7 @@ var http = require('http');
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-const db      ='mongodb://localhost:27017/polls';
+var db      ='mongodb://localhost:27017/polls';
 mongoose.connect(db);
 
 // set static folder

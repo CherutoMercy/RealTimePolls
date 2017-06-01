@@ -1,7 +1,5 @@
 // Get Poll schema and model
-//var PollSchema = require('../models/Poll.js').PollSchema;
-//var Poll = db.model('polls', PollSchema);
-var Poll     = require('../models/poll');
+var Poll = require('../models/poll.js')
 
 module.exports = {
 // Main application view

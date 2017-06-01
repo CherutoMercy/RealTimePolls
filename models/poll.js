@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Schema     = mongoose.Schema;
 
 // Subdocument schema for votes
 var voteSchema = new mongoose.Schema({ ip: 'String' });
@@ -10,7 +11,8 @@ var choiceSchema = new mongoose.Schema({
 });
 
 // Document schema for polls
-exports.PollSchema = new mongoose.Schema({
+var PollSchema = Schema({
   question: { type: String, required: true },
   choices: [choiceSchema]
 });
+module.exports = mongoose.model('Poll', PollSchema)
